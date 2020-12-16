@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(102, 186, 189);
+}
+
+h1, p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) translate(-50%, -50%);
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+p {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+#root.clicked h1 {
+  animation: 5s linear myRotate infinite alternate;
+}
+
+#root.clicked p {
+  animation: 5s linear myRotate infinite alternate-reverse;
+}
+
+@keyframes myRotate {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
