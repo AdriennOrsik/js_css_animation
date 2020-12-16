@@ -6,14 +6,10 @@ let myObjects = [
 			content: "Orsik Adrienn"
     },
     {
-    tag: "p",
-    content: "Front End Developer"
+      tag: "p",
+      content: "Front End Developer"
     }
   ];
-
-  /* for(let i= 0; i < myObjects.length; i++) {
-
-  } */
 
   const root = document.getElementById("root");
 
@@ -21,14 +17,14 @@ let myObjects = [
     console.log(o.tag);
   }
 
-for(o of myObjects) {
-  root.insertAdjacentHTML('beforeend', `
-    <${o.tag}>${o.content}</${o.tag}>
+  for(o of myObjects) {
+    root.insertAdjacentHTML('beforeend', `
+      <${o.tag}>${o.content}</${o.tag}>
     `);
 }
 
 root.addEventListener('click', function() {
-root.classList.toggle('clicked');
+  root.classList.toggle('clicked');
 });
 
 }
